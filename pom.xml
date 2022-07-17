@@ -63,18 +63,6 @@
         <!--        </dependency>-->
 
     </dependencies>
-    <repositories>
-        <repository>
-            <id>farmandosb</id>
-            <url>https://pkgs.dev.azure.com/farmandosb/_packaging/farmandosb/maven/v1</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <plugin>
