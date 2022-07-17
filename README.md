@@ -1,6 +1,4 @@
 # automation-api
-
-## Current Status (badge)
 [![Build Status](https://dev.azure.com/farmandosb/automation-api/_apis/build/status/farmandosb.automation-api?branchName=master)](https://dev.azure.com/farmandosb/automation-api/_build/latest?definitionId=1&branchName=master)
 
 ## Description
