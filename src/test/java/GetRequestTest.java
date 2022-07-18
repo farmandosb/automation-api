@@ -36,9 +36,8 @@ public class GetRequestTest extends BaseTest {
     public static void getContentType() {
         given()
                 .get("https://reqres.in/api/users")
-                .contentType()
-                .contains("application/json");
-
+                .then()
+                .contentType("application/json");
     }
 
     @Test
@@ -55,8 +54,6 @@ public class GetRequestTest extends BaseTest {
     @Test
     public static void getSingleUserById() {
         UserDTO userDTO = get("https://reqres.in/api/users/2").as(UserDTO.class);
-
+        Assert.assertNotNull(userDTO);
     }
-
-
 }

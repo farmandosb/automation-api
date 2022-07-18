@@ -12,6 +12,10 @@ public class PropertiesCache {
         loadProperties(getProperty("currentProperties"));
     }
 
+    public static PropertiesCache getInstance() {
+        return LazyHolder.INSTANCE;
+    }
+
     private void loadProperties(String propFileName) {
         InputStream in = this.getClass().getClassLoader().getResourceAsStream(propFileName);
         System.out.printf("Reading all properties from: %s", propFileName);
@@ -20,15 +24,6 @@ public class PropertiesCache {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    //Bill Pugh Solution for singleton pattern
-    private static class LazyHolder {
-        private static final PropertiesCache INSTANCE = new PropertiesCache();
-    }
-
-    public static PropertiesCache getInstance() {
-        return LazyHolder.INSTANCE;
     }
 
     public String getProperty(String key) {
@@ -41,5 +36,10 @@ public class PropertiesCache {
 
     public boolean containsKey(String key) {
         return configProp.containsKey(key);
+    }
+
+    //Bill Pugh Solution for singleton pattern
+    private static class LazyHolder {
+        private static final PropertiesCache INSTANCE = new PropertiesCache();
     }
 }

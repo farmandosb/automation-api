@@ -11,7 +11,7 @@ public class BaseTest {
         endpointGetSingleUser=users/2
         createUserPath=users
         */
-        
+
         RestAssured.basePath = PropertiesCache.getInstance().getProperty("basePath");
         RestAssured.rootPath = "data";
     }
