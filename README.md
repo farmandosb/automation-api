@@ -4,7 +4,7 @@
 
 ## Description
 
-API testing sample project using RestAssured + Java.
+API testing sample project using RestAssured + Java. CI running on Azure DevOps
 
 ## Getting Started
 
